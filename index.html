@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vadym Demchevskyi</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cascadia+Mono:ital,wght@0,200..700;1,200..700&display=swap" rel="stylesheet">    
+</head>
+<body>
+    <nav class="nav">
+        <div class="left-side">
+            <div class="logo">Superwatch</div>
+        </div>
+        <div class="right-side">
+            <a href="#" class="account"><svg viewBox="0 0 24 24" id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" fill="#ffffff" stroke="#ffffff"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><defs><style>.cls-1{fill:none;stroke:#ffffff;stroke-miterlimit:10;stroke-width:1.91px;}</style></defs><circle class="cls-1" cx="12" cy="7.25" r="5.73"></circle><path class="cls-1" d="M1.5,23.48l.37-2.05A10.3,10.3,0,0,1,12,13h0a10.3,10.3,0,0,1,10.13,8.45l.37,2.05"></path></g></svg></a>
+            <a href="#" class="cart"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M3.864 16.4552C4.40967 18.6379 4.68251 19.7292 5.49629 20.3646C6.31008 21 7.435 21 9.68486 21H14.3155C16.5654 21 17.6903 21 18.5041 20.3646C19.3179 19.7292 19.5907 18.6379 20.1364 16.4552C20.9943 13.0234 21.4233 11.3075 20.5225 10.1538C19.6217 9 17.853 9 14.3155 9H9.68486C6.14745 9 4.37875 9 3.47791 10.1538C2.94912 10.831 2.87855 11.702 3.08398 13" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round"></path> <path d="M19.5 9.5L18.7896 6.89465C18.5157 5.89005 18.3787 5.38775 18.0978 5.00946C17.818 4.63273 17.4378 4.34234 17.0008 4.17152C16.5619 4 16.0413 4 15 4M4.5 9.5L5.2104 6.89465C5.48432 5.89005 5.62128 5.38775 5.90221 5.00946C6.18199 4.63273 6.56216 4.34234 6.99922 4.17152C7.43808 4 7.95872 4 9 4" stroke="#ffffff" stroke-width="1.5"></path> <path d="M9 4C9 3.44772 9.44772 3 10 3H14C14.5523 3 15 3.44772 15 4C15 4.55228 14.5523 5 14 5H10C9.44772 5 9 4.55228 9 4Z" stroke="#ffffff" stroke-width="1.5"></path> </g></svg></a>
+            <a href="#" class="button-buy">Buy Now</a>
+        </div>
+    </nav>
+    <div class="login-popup">
+        <div class="login-content">
+            <div class="login-form-container active">
+                <h2>Login to Superwatch</h2>
+                <form class="login-form">
+                    <div class="login-form__group">
+                        <label for="login-email" class="login-form__label">Email</label>
+                        <input type="email" id="login-email" class="login-form__input" placeholder="Enter email" required>
+                    </div>
+                    <div class="login-form__group">
+                        <label for="login-password" class="login-form__label">Password</label>
+                        <input type="password" id="login-password" class="login-form__input" placeholder="Enter password" required>
+                    </div>
+                    <p class="login-form__error" style="display: none;">Invalid email or password.</p>
+                    <button type="submit" class="login-form__button">Login</button>
+                </form>
+                <p class="login-form__signup">Don't have an account? <a href="#" class="signup-link">Sign Up</a></p>
+            </div>
+            <div class="signup-form-container">
+                <h2>Sign Up for Superwatch</h2>
+                <form class="signup-form">
+                    <div class="login-form__group">
+                        <label for="signup-username" class="login-form__label">Username</label>
+                        <input type="text" id="signup-username" class="login-form__input" placeholder="Enter username" required>
+                    </div>
+                    <div class="login-form__group">
+                        <label for="signup-email" class="login-form__label">Email</label>
+                        <input type="email" id="signup-email" class="login-form__input" placeholder="Enter email" required>
+                    </div>
+                    <div class="login-form__group">
+                        <label for="signup-password" class="login-form__label">Password</label>
+                        <input type="password" id="signup-password" class="login-form__input" placeholder="Enter password" required>
+                    </div>
+                    <p class="login-form__error" style="display: none;">Email already exists or invalid input.</p>
+                    <button type="submit" class="login-form__button">Sign Up</button>
+                </form>
+                <p class="login-form__signup">Already have an account? <a href="#" class="login-link">Login</a></p>
+            </div>
+            <button class="login-close">Close</button>
+        </div>
+    </div>
+    <div class="cart-popup" style="display: none;">
+        <div class="cart-content">
+            <h2>Your Cart</h2>
+            <div class="cart-items"></div>
+            <div class="cart-total">Total: $0.00</div>
+            <button class="cart-checkout">Checkout</button>
+            <button class="cart-close">Close</button>
+        </div>
+    </div>
+    <div class="wrapper">
+        <main class="main">
+            <article class="watch-main">
+                <div class="name">
+                    <p class="subtitle">Crafted for the bold</p>
+                    <p class="title">VELAR V1</p>
+                    <p class="subtitle_m">Style in every second</p>
+                    <a href="#" class="button-buy button-buy__main">Buy Now</a>
+                </div>
+            </article>
+            <article class="application">
+                <div class="application__shadow"></div>
+                <div class="application__text">
+                    <div class="application__title">A Universe of Apps on Your Wrist</div>
+                    <div class="application__subtitle">Supports a wide range of apps, from fitness and navigation to messaging and music, keeping you connected and productive</div>
+                </div>
+                <div class="application__image-hand-wrapper">
+                    <img src="./img/close-up-hand-wearing-smartwatch.jpg" alt="" class="application__image-hand">
+                </div>
+                <img src="./img/11-removebg-preview.png" alt="" class="application__image-watch">
+            </article>
+            <article class="notification">
+                <div class="notification__bg"></div>
+                <div class="notification__text">
+                    <div class="notification__title">Never Miss a Moment with Instant Notifications</div>
+                    <div class="notification__subtitle">Stay in the loop with real-time alerts for messages, calls, and apps, ensuring you’re always connected to what matters most</div>
+                </div>
+                <img src="./img/smartwatch-screen-digital-device.jpg" alt="" class="notification__image-watch">
+            </article>
+            <article class="connectivity">
+                <img src="./img/abstract-luxury-soft-red-background-christmas-valentines-layout-designstudioroom-web-template-busine.jpg" alt="" class="connectivity__bg">
+                <img src="./img/90959-removebg-preview.png" alt="" class="connectivity__watch">
+                <div class="connectivity__title">Connectivity VELAR V1</div>
+                <div class="connectivity__bluetooth connectivity__item">
+                    <div class="item__top">
+                        <div class="item__icon"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#ffffff"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M16.2633 8.26238L11 12V5.22457C11 3.33816 11 2.39496 11.6047 2.08561C12.2093 1.77625 12.9813 2.32448 14.5253 3.42093L16.2633 4.6551C17.4211 5.47731 18 5.88842 18 6.45874C18 7.02907 17.4211 7.44017 16.2633 8.26238Z" stroke="#7000cc" stroke-width="1.5"></path> <path d="M16.2633 19.3449L14.5253 20.5791C12.9813 21.6755 12.2093 22.2238 11.6047 21.9144C11 21.605 11 20.6618 11 18.7754V12L16.2633 15.7376C17.4211 16.5598 18 16.9709 18 17.5413C18 18.1116 17.4211 18.5227 16.2633 19.3449Z" stroke="#7000cc" stroke-width="1.5"></path> <path opacity="0.5" d="M6 15.5L11 12L6 8.5" stroke="#7000cc" stroke-width="1.5" stroke-linecap="round"></path> </g></svg></div>
+                        <div class="item__title">Bluetooth Support</div>
+                    </div>
+                    <div class="item__text">Seamless Bluetooth Connectivity at Your Fingertips</div>
+                </div>
+                <div class="connectivity__wifi connectivity__item">
+                    <div class="item__top">
+                        <div class="item__icon"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M12 19.5C12.5523 19.5 13 19.0523 13 18.5C13 17.9477 12.5523 17.5 12 17.5C11.4477 17.5 11 17.9477 11 18.5C11 19.0523 11.4477 19.5 12 19.5Z" fill="#7000cc"></path> <path d="M4.60055 11.8608C4.192 12.2324 4.16207 12.8649 4.53369 13.2734C4.90532 13.682 5.53778 13.7119 5.94633 13.3403C7.54565 11.8855 9.66836 11 12 11C14.3316 11 16.4544 11.8855 18.0537 13.3403C18.4622 13.7119 19.0947 13.682 19.4663 13.2734C19.8379 12.8649 19.808 12.2324 19.3994 11.8608C17.4463 10.0842 14.8485 9 12 9C9.15148 9 6.55365 10.0842 4.60055 11.8608Z" fill="#7000cc"></path> <path d="M7.96394 15.5605C7.55539 15.9322 7.52546 16.5646 7.89708 16.9732C8.26871 17.3817 8.90117 17.4116 9.30971 17.04C10.0209 16.3931 10.9635 16 12 16C13.0365 16 13.9791 16.3931 14.6903 17.04C15.0988 17.4116 15.7313 17.3817 16.1029 16.9732C16.4746 16.5646 16.4446 15.9322 16.0361 15.5605C14.9711 14.5918 13.5534 14 12 14C10.4466 14 9.02893 14.5918 7.96394 15.5605Z" fill="#7000cc"></path> </g></svg></div>
+                        <div class="item__title">Wi-Fi Support</div>
+                    </div>
+                    <div class="item__text">Fast, reliable internet access anywhere</div>
+                </div>
+                <div class="connectivity__nfc connectivity__item">
+                    <div class="item__top">
+                        <div class="item__icon"><svg viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path style="fill:#7000cc;stroke:none;" d="m 20,4.79296 v 18.10352 l -9,-9 v 3 c 0,0 8,9 9,9 h 0.210938 C 20.845635,25.55074 21.44166,25.14619 22,24.69531 V 6.09765 C 21.381293,5.59802 20.711592,5.16258 20,4.79296 Z M 8.7890625,4.89648 C 8.1543654,5.24222 7.5583404,5.64677 7,6.09765 V 24.69531 c 0.6187068,0.49963 1.2884078,0.93504 2,1.30469 V 7.89648 l 9,9 v -3 c 0,0 -8,-9 -9,-9 z"></path></g></svg></div>
+                        <div class="item__title">NFC tap-pay</div>
+                    </div>
+                    <div class="item__text">Quick payments, secure data sharing</div>
+                </div>
+                <div class="connectivity__gps connectivity__item">
+                    <div class="item__top">
+                        <div class="item__icon"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z" stroke="#7000cc" stroke-width="2"></path> <path d="M13.9137 15.1001L15.32 11.1939C15.8932 9.60167 14.353 8.06149 12.7608 8.6347L8.85455 10.0409C7.1758 10.6453 7.39162 13.085 9.15038 13.3853C9.87655 13.5093 10.4454 14.0781 10.5694 14.8043C10.8696 16.5631 13.3094 16.7789 13.9137 15.1001Z" stroke="#7000cc" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg></div>
+                        <div class="item__title">GPS Tracking</div>
+                    </div>
+                    <div class="item__text">Accurate location for adventures, fitness</div>
+                </div>
+                <a href="#" class="button-buy connectivity__button-buy">Buy Now</a>
+            </article>
+            <article class="buy">
+                <div class="buy__bg"><svg width="600" height="600">
+                    <path id="curved-line" d="M 300 100 Q 350 200 300 300 Q 250 400 300 500" stroke="white" stroke-width="10" fill="none" />
+                </svg></div>
+                <div class="buy__discount">
+                    <div class="discount__title">Subscribe to get 20% off your first purchase</div>
+                    <form class="subscribe-form">
+                        <label class="subscribe-form__label" for="email">E-mail *</label>
+                        <div class="subscribe-form__wrapper">
+                            <input type="email" id="email" class="subscribe-form__input" placeholder="Register here" required>
+                            <button type="submit" class="subscribe-form__button">Subscribe</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="buy__photo"></div>
+                <a href="#" class="button-buy buy__button-buy">Buy Now</a>
+            </article>        
+        </main>
+        <footer class="footer">
+            <div class="footer__main">
+                <div class="footer__left-side">
+                    <a href="#" class="cookie">Cookie Policy</a>
+                </div>   
+                <div class="footer__right-side">
+                    <ul class="links">
+                        <li class="link"><a href="https://www.instagram.com" target="_blank" rel="noopener">Instagram</a></li>
+                        <li class="link"><a href="https://www.facebook.com" target="_blank" rel="noopener">Facebook</a></li>
+                        <li class="link"><a href="https://www.x.com" target="_blank" rel="noopener">X</a></li>
+                        <li class="link"><a href="https://www.tiktok.com" target="_blank" rel="noopener">TikTok</a></li>
+                        <li class="link"><a href="https://www.youtube.com/" target="_blank" rel="noopener">YouTube</a></li>
+                    </ul>
+                </div>
+            </div>
+            <p class="copyright">© 2025 Vadym Demchevskyi. All rights reserved.</p>
+        </footer>
+    </div>
+    <script src="./js/script.js" defer></script>
+</body>
+</html>
