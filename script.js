@@ -169,7 +169,7 @@ document.addEventListener('DOMContentLoaded', () => {
             cartItem.classList.add('cart-item');
             cartItem.classList.add('added');
             cartItem.innerHTML = `
-                <img src="./img/smartwatch-screen-digital-device-removebg-preview.png" alt="${item.name}">
+                <img src="smartwatch-screen-digital-device-removebg-preview.png" alt="${item.name}">
                 <div class="cart-item-details">
                     <p>${item.name}</p>
                     <p>$${item.price.toFixed(2)} x ${item.quantity}</p>
